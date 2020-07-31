@@ -6,11 +6,328 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style></style>
+    <link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/audioplayer.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        html {
+            font-size: 62.5%;
+        }
+        
+        .ind_top {
+            width: 100%;
+            height: 6.6rem;
+            background-image: linear-gradient(to right, #199ce3, #e632a8);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .ind_top>span {
+            width: 6rem;
+            height: 6.6rem;
+            line-height: 6.6rem;
+        }
+        
+        .ind_top>span:nth-child(1) {
+            width: 4rem;
+            margin: 2.2rem 0rem 0rem 1rem;
+            background: url(./img/home_03.png) no-repeat;
+            background-size: 65%;
+        }
+        
+        .ind_top>span:nth-child(2) {
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .ind_top>span:nth-child(3) {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 2rem;
+            color: rgb(236, 50, 165);
+            position: relative;
+        }
+        
+        .ind_top>span:nth-child(3) span {
+            position: absolute;
+            background: url(./img/home-7.png) no-repeat;
+            width: 4.4rem;
+            height: .2rem;
+            top: 80%;
+            transform: translate(-50%);
+            left: 50%;
+        }
+        
+        .ind_top span:nth-child(4) {
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .ind_top span:nth-child(5) {
+            width: 3.5rem;
+            margin: 2.2rem 0rem 0rem 0rem;
+            background: url(./img/3@2x.png) no-repeat;
+            background-size: 70%;
+        }
+        
+        .cent_cont {
+            display: flex;
+            justify-content: space-around;
+            height: 9.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .cent_cont span {
+            height: 100%;
+            width: 20%;
+            background-size: 80%;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .jingxuan {
+            box-sizing: border-box;
+            padding: 0rem 2rem;
+            height: 4rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .jingxuan>span:nth-child(1) {
+            height: 4rem;
+            width: 8rem;
+            line-height: 4rem;
+            font-size: 1.6rem;
+        }
+        
+        .jingxuan>span:nth-child(2) {
+            height: 4rem;
+            width: 8rem;
+            line-height: 4rem;
+            font-size: 1.4rem;
+        }
+        
+        .jingxuan>span:nth-child(2) span:nth-child(2) {
+            display: inline-block;
+            height: 80%;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+            border-bottom: .2rem solid rgb(236, 50, 165);
+        }
+        
+        .floor {
+            width: 100%;
+            height: 5.5rem;
+            background-image: linear-gradient(to right, #199ce3, #e632a8);
+            position: fixed;
+            bottom: 0;
+            padding: 0;
+        }
+        
+        .geshou {
+            display: flex;
+            height: 16.5rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .geshou>span {
+            height: 90%;
+            width: 30%;
+            margin: .3rem;
+            border-radius: .5rem;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid #eec9e8;
+        }
+        
+        .geshou p {
+            font-size: 1.2rem;
+        }
+        
+        .geshou>span>span {
+            position: absolute;
+            bottom: 0;
+            font-size: 1rem;
+            transform: scale(.8);
+            color: #888;
+        }
+    </style>
 </head>
 
 <body>
-    kjnkvsvsfv
+    <div class="ind_top">
+        <span></span>
+        <span>我的</span>
+        <span>音乐馆<span></span>
+        </span>
+        <span>发现</span>
+        <span></span>
+    </div>
+    <div>
+        <div class="swiper-container ">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./img/home-1.png" alt="" style="width: 100%;">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./img/home-2.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="swiper-slide ">
+                    <img src="./img/home-3.jpg " alt="" style="width: 100%;">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="cent_cont">
+        <span>
+            <img src="./img/4@2x.png" alt="" width="90%">
+            歌手</span>
+        <span>
+            <img src="./img/5@2x.png" alt="" width="90%">
+            专辑
+        </span>
+        <span>
+            <img src="./img/6@2x.png" alt="" width="90%">
+            
+            排行</span>
+        <span>
+            <img src="./img/7@2x.png" alt="" width="90%">
+            
+            电台</span>
+        <span>
+            <img src="./img/8@2x.png" alt="" width="90%">
+            
+            歌单</span>
+    </div>
+    <div class="jingxuan">
+        <span>精选歌单</span>
+        <span><span>最热</span><span>推荐</span></span>
+    </div>
+    <div class="geshou">
+        <span>
+            <img src="./img/10@2x.png" alt="" width="100%">
+            <p>轻车上路，一路飙向爱的乌托邦</p>
+            <span>安安静静做自己</span>
+        </span>
+        <span>
+            <img src="./img/11@2x.png" alt="" width="100%">
+            <p>轻车上路，一路飙向爱的乌托邦</p>
+            <span>安安静静做自己</span>
+        </span>
+        <span>
+            <img src="./img/12@2x.png" alt="" width="100%">
+            <p>轻车上路，一路飙向爱的乌托邦</p>
+            <span>安安静静做自己</span>
+        </span>
+        <span>
+            <img src="./img/10@2x.png" alt="" width="100%">
+            <p>轻车上路，一路飙向爱的乌托邦</p>
+            <span>安安静静做自己</span>
+        </span>
+        <span>
+            <img src="./img/11@2x.png" alt="" width="100%">
+            <p>轻车上路，一路飙向爱的乌托邦</p>
+            <span>安安静静做自己</span>
+        </span>
+        <span>
+            <img src="./img/12@2x.png" alt="" width="100%">
+            <p>轻车上路，一路飙向爱的乌托邦</p>
+            <span>安安静静做自己</span>
+        </span>
+
+
+
+    </div>
+    <div class="floor">
+        <div id="wrapper">
+            <audio preload="auto" controls>
+                    <source src=".//audio/yuhou.flac">
+                </audio>
+        </div>
+    </div>
+    <script src="./js/swiper-4.1.6.min.js "></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/audioplayer.js"></script>
+    <script>
+        $(function() {
+            $('audio').audioPlayer();
+        });
+        (function(doc) {
+            var addEvent = 'addEventListener',
+                type = 'gesturestart',
+                qsa = 'querySelectorAll',
+                scales = [1, 1],
+                meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+
+            function fix() {
+                meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+                doc.removeEventListener(type, fix, true);
+            }
+            if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+                fix();
+                scales = [.25, 1.6];
+                doc[addEvent](type, fix, true);
+            }
+        }(document));
+
+        var myswiper = new Swiper('.swiper-container', {
+            initialSlide: 1,
+            direction: 'horizontal',
+            speed: 1000,
+            autoplay: {
+                delay: 2000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            effect: 'fade'
+        });
+
+        // var geshou = document.getElementsByClassName('geshou').getElementsByTagname('span')[0];
+        var jie = null;
+        (function() {
+            var ajax_ = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+            ajax_.open('get', 'http://192.168.1.45:3000/home?type=new', true);
+            ajax_.send();
+            ajax_.onreadystatechange = function() {
+                if (ajax_.readyState == 4) {
+                    if (ajax_.status == 200) {
+                        jie = JSON.parse(ajax_.responseText);
+                        console.log(jie);
+                        var x = jie[0];
+                        chang(x);
+                    }
+                }
+
+                // function chang(j) {
+                //     var sc = '';
+                //     for (var i = 0; i < j.length; i++) {
+
+                //         sc += '<span>';
+                //         sc += '<img src="' + x[i].img + '" style="width:100%">';
+                //         sc += '<p>' + x[i].text + '</p>'
+                //         sc += '<span >' + x[i].price + "</span>";
+                //         sc += '</span>';
+
+                //     }
+                //     document.getElementsByClassName('geshou').innerHTML = sc;
+                // }
+
+
+            }
+
+        })();
+    </script>
 </body>
 
 </html>
