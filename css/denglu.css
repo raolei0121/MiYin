@@ -1,0 +1,108 @@
+body {
+  margin: 0 auto;
+  min-width: 320px;
+  max-width: 640px;
+  font-size: 14px;
+  font-family: -apple-system, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #999;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+}
+nav {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+nav div > img {
+  width: 22px;
+  position: absolute;
+  top: 15px;
+  left: 32px;
+}
+nav span {
+  position: absolute;
+  right: 32px;
+  top: 14px;
+  font-size: 18px;
+  color: #666666;
+}
+.kuang {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  box-sizing: border-box;
+}
+.long {
+  padding-top: 20px ;
+  width: 125px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.long img {
+  width: 125px;
+}
+.input {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1.5px solid #e8e8e8;
+}
+.input input {
+  height: 3rem;
+  outline: none;
+  border: 0px;
+  padding-left: 85px;
+  box-sizing: border-box;
+}
+.input .bj > img {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 22px;
+  height: 22px;
+}
+.tiao {
+  margin: 20px auto;
+  width: 100%;
+  height: 60px;
+  position: relative;
+}
+.tiao a > img {
+  display: block;
+  width: 51px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.wez {
+  text-align: center;
+  letter-spacing: 2px;
+}
+.wez a {
+  color: #666;
+}
+.wez a span {
+  color: #333;
+}
+p:nth-child(2) {
+  font-size: 13px;
+}
+.jlt {
+  position: relative;
+  bottom: 10%;
+  margin: 0 auto;
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.jlt div > img {
+  width: 45px;
+}
