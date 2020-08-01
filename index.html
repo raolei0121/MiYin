@@ -6,11 +6,412 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style></style>
+    <link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/demo.css" />
+    <link rel="stylesheet" href="css/audioplayer.css" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            height: 100rem;
+        }
+        
+        html {
+            font-size: 62.5%;
+        }
+        
+        .ind_top {
+            width: 100%;
+            height: 6.6rem;
+            background-image: linear-gradient(to right, #199ce3, #e632a8);
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .ind_top>span {
+            width: 6rem;
+            height: 6.6rem;
+            line-height: 6.6rem;
+        }
+        
+        .ind_top>span:nth-child(1) {
+            width: 4rem;
+            margin: 2.2rem 0rem 0rem 1rem;
+            background: url(./img/home_03.png) no-repeat;
+            background-size: 65%;
+        }
+        
+        .ind_top>span:nth-child(2) {
+            font-size: 2rem;
+            color: white;
+            text-align: center;
+        }
+        
+        .ind_top>span:nth-child(3) {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 2rem;
+            color: rgb(236, 50, 165);
+            position: relative;
+        }
+        
+        .ind_top>span:nth-child(3) span {
+            position: absolute;
+            background: url(./img/home-7.png) no-repeat;
+            width: 4.4rem;
+            height: .2rem;
+            top: 80%;
+            transform: translate(-50%);
+            left: 50%;
+        }
+        
+        .ind_top span:nth-child(4) {
+            text-align: center;
+            font-size: 2rem;
+            color: white;
+        }
+        
+        .ind_top span:nth-child(5) {
+            width: 3.5rem;
+            margin: 2.2rem 0rem 0rem 0rem;
+            background: url(./img/3@2x.png) no-repeat;
+            background-size: 70%;
+        }
+        
+        .cent_cont {
+            display: flex;
+            justify-content: space-around;
+            height: 9.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .cent_cont span {
+            height: 100%;
+            width: 20%;
+            background-size: 80%;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+        
+        .cent_cont>span>img {
+            display: inline-block;
+            border: .03rem dashed #55A8FD;
+            background: rgba(9, 144, 223, 0.2);
+            margin-bottom: 1rem;
+        }
+        
+        .jingxuan {
+            box-sizing: border-box;
+            margin-top: 1rem;
+            padding: 0rem 2rem;
+            height: 4rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .jingxuan>span:nth-child(1) {
+            height: 4rem;
+            width: 8rem;
+            line-height: 4rem;
+            font-size: 1.6rem;
+        }
+        
+        .jingxuan>span:nth-child(2) {
+            height: 4rem;
+            width: 8rem;
+            line-height: 4rem;
+            font-size: 1.4rem;
+        }
+        
+        .jingxuan>span:nth-child(2) span:nth-child(2) {
+            display: inline-block;
+            height: 80%;
+            margin-left: 1rem;
+        }
+        
+        .hasi {
+            margin-bottom: 1rem;
+            border-bottom: .2rem solid rgb(236, 50, 165);
+        }
+        
+        .floor {
+            width: 100%;
+            height: 5.5rem;
+            background-image: linear-gradient(to right, #199ce3, #e632a8);
+            position: fixed;
+            bottom: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .geshou {
+            display: flex;
+            height: 16.5rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .geshou>span {
+            height: 90%;
+            width: 30%;
+            margin: .3rem;
+            border-radius: .5rem;
+            /* overflow: hidden; */
+            position: relative;
+            border: .1rem solid #ccc;
+        }
+        
+        .geshou>span img {
+            border: .03rem dashed #55A8FD;
+            /* border-radius: .5rem; */
+            background: rgba(9, 144, 223, 0.2);
+            height: 8.338rem;
+        }
+        
+        .geshou p {
+            font-size: 1.2rem;
+        }
+        
+        .geshou>span>span {
+            width: 10rem;
+            font-size: 1rem;
+            transform: scale(.7);
+            color: #888;
+            display: block;
+            margin-top: 1rem;
+        }
+        
+        .botto {
+            width: 60%;
+            float: left;
+        }
+        
+        .botto span {
+            float: left;
+            width: 5rem;
+            height: 5rem;
+            background: url(./img/50@2x.png) no-repeat;
+            background-size: 85%;
+            margin-top: .6rem;
+            margin-left: 1rem;
+        }
+        
+        .botto>p {
+            margin-left: 1rem;
+            margin-top: 1rem;
+            float: left;
+            color: white;
+            font-size: 1.3rem;
+        }
+        
+        .bott_right {
+            margin-top: 1.3rem;
+            margin-right: 1rem;
+            float: right;
+            width: 3rem;
+            height: 3rem;
+            background: url(./img/home-6.png) no-repeat;
+            background-size: 100%;
+        }
+        
+        .nasi {
+            display: inline-block;
+            height: 80%;
+            margin-bottom: 1rem;
+            border-bottom: .2rem solid rgb(236, 50, 165);
+        }
+    </style>
 </head>
 
 <body>
-    kjnkvsvsfv
+    <div class="ind_top">
+        <span></span>
+        <span>我的</span>
+        <span>音乐馆<span></span>
+        </span>
+        <span>发现</span>
+        <span></span>
+    </div>
+    <div>
+        <div class="swiper-container ">
+            <div class="swiper-wrapper">
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="cent_cont">
+        <span>
+            <img src="./img/4@2x.png" alt="" width="90%">
+            歌手</span>
+        <span>
+            <img src="./img/5@2x.png" alt="" width="90%">
+            专辑
+        </span>
+        <span>
+            <img src="./img/6@2x.png" alt="" width="90%">
+            
+            排行</span>
+        <span>
+            <img src="./img/7@2x.png" alt="" width="90%">
+            
+            电台</span>
+        <span>
+            <img src="./img/8@2x.png" alt="" width="90%">
+            
+            歌单</span>
+    </div>
+    <div class="jingxuan">
+        <span>精选歌单</span>
+        <span><span id="zuire">最热</span><span class="hasi" id="tuijian">推荐</span></span>
+    </div>
+    <div class="geshou">
+
+    </div>
+    <div class="floor">
+        <div class="bott_right"></div>
+
+        <div id="wrapper">
+            <audio preload="auto" controls>
+                    <source src=".//audio/yuhou.flac">
+                </audio>
+        </div>
+        <div class="botto">
+            <span></span>
+            <p>Where IS Your Love</p>
+            <p>横滑可以切换上下首哦</p>
+        </div>
+    </div>
+    <script src="./js/swiper-4.1.6.min.js "></script>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/audioplayer.js"></script>
+    <script>
+        $(function() {
+            $('audio').audioPlayer();
+        });
+        (function(doc) {
+            var addEvent = 'addEventListener',
+                type = 'gesturestart',
+                qsa = 'querySelectorAll',
+                scales = [1, 1],
+                meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+
+            function fix() {
+                meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+                doc.removeEventListener(type, fix, true);
+            }
+            if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+                fix();
+                scales = [.25, 1.6];
+                doc[addEvent](type, fix, true);
+            }
+        }(document));
+
+        window.onload = function() {
+            var myswiper = new Swiper('.swiper-container', {
+                initialSlide: 1,
+                direction: 'horizontal',
+                speed: 1000,
+                autoplay: {
+                    delay: 2000,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                effect: 'fade'
+            });
+
+        }
+
+        function getMusci(options) {
+            $.get(options.url, options.data, options.succ)
+        }
+        (getMusci({
+            url: 'http://192.168.1.45:3000/home',
+            data: {
+                type: 'recommend'
+            },
+            succ(e) {
+
+                let arr = e.musicList;
+                arr.forEach((val) => {
+                    let template = `<span>
+                                        <img src="${val.imgurl}" alt="" style="width:100%">
+                                        <p>${val.info}</p>
+                                        <span>${val.title}</span>
+                                    </span> `
+                    $('.geshou').append(template);
+                })
+
+            }
+        }));
+
+
+
+
+
+
+        var url = 'http://192.168.1.45:3000/home?type=banner';
+        $.get(url, function(data) {
+            var val = data.imglist;
+
+            for (var i = 0; i < val.length; i++) {
+
+                let template = `<div class="swiper-slide">
+                                        <img src="${val[i]}" alt="" style="width:100%">   
+                                    </div> `
+                $('.swiper-wrapper').append(template);
+            }
+        })
+
+
+
+
+
+
+
+        $('#zuire').on('touchstart', function() {
+            $(this).addClass('nasi');
+            $('#tuijian').removeClass('hasi')
+            var url = 'http://192.168.1.45:3000/home?type=new';
+
+            $.get(url, function(data) {
+                var val = data.musicList;
+                console.log(val);
+                for (var i = 0; i < val.length; i++) {
+
+                    let template = `<span>
+                                        <img src="${val[i].imgurl}" alt="" style="width:100%">
+                                        <p>${val[i].info}</p>
+                                        <span>${val[i].title}</span>
+                                    </span> `
+                    $('.geshou').append(template);
+                }
+            })
+        });
+        $('#tuijian').on('touchstart', function() {
+            $(this).addClass('hasi');
+            $('#zuire').removeClass('nasi')
+            var url = 'http://192.168.1.45:3000/home?type=recommend';
+
+            $.get(url, function(data) {
+                var val = data.musicList;
+                console.log(val);
+                for (var i = 0; i < val.length; i++) {
+                    let template = `<span>
+                                        <img src="${val[i].imgurl}" alt="" style="width:100%">
+                                        <p>${val[i].info}</p>
+                                        <span>${val[i].title}</span>
+                                    </span> `
+                    $('.geshou').append(template);
+                }
+            })
+        });
+    </script>
 </body>
 
 </html>
